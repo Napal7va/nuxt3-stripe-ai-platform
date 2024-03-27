@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/supabase'],
+  devtools: { enabled: true },
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxts/supabase'],
   shadcn: {
     /**
      * Prefix for all the imported component
