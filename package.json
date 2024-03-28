@@ -10,12 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.40.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "discord-api-types": "^0.37.76",
     "lucide-vue-next": "^0.363.0",
-    "nuxt": "npm:nuxt3@latest",
+    "nuxt": "^3.11.1",
     "radix-vue": "^1.5.3",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
