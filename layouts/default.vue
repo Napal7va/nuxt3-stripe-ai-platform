@@ -6,6 +6,7 @@
         </div>
         <main class="md:pl-72 pb-10">
             <!-- Navbar -->
+            <Navbar/>
             <slot/>
         </main>
     </div>
@@ -13,6 +14,7 @@
 
 <script setup lang="ts">
 import Sidebar from '../components/ui/Sidebar.vue';
+import Navbar from '../components/ui/Navbar.vue';
 
 
 </script>
