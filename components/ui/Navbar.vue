@@ -10,16 +10,35 @@
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" class="w-72 left-[100px]">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
+                    
                     <div class="w-full flex items-center p-2 pl-3">
-                    <Avata>
-                        <Ava
-                    </Avata>
+                    <Avatar class="mr-2">
+                        <AvatarImage 
+                        v-if="user?.user_metadata.avatar_url"
+                        :src="user.user_metadata.avatar_url"
+                        >
+                        <AvatarCallback>
+                            {{ user.email?.charAt(0).toUpperCase }}
+                            {{ user.email?.charAt(1).toUpperCase }}
+                        </AvatarCallback>
+                        </AvatarImage>
+                    </Avatar>
+                    <div>
+                        <div class="font-bold">
+                            {{ user?.user_metadata.full_name }}
+                        </div>
+                        <div class="text-sm">
+                            {{ user?.email }}
+                        </div>
                     </div>
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Team</DropdownMenuItem>
-                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    </div>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>
+                        <Icon class="mr-2 h-4 w-4" name="heroicons:arrow-left-on-rectangle"/>
+                        <span class="ml-2">
+                            logout
+                        </span>
+                    </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>
