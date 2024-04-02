@@ -28,6 +28,7 @@
   
     const supabaseClient = useSupabaseClient()
     definePageMeta({
-        layouts: 'home'
+        layout: 'home',
     });
+   
   </script>
