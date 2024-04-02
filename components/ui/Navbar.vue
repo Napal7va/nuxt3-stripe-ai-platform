@@ -1,6 +1,7 @@
 <template>
     <div class="flex items-center p-4">
         <!-- MobileSidee -->
+        <MobileSidebar/>
         <div class="flex w-full justify-end">
             <DropdownMenu as-child>
                 <DropdownMenuTrigger>
@@ -33,7 +34,7 @@
                     </div>
                     </div>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>
+                    <DropdownMenuItem @click="logout">
                         <Icon class="mr-2 h-4 w-4" name="heroicons:arrow-left-on-rectangle"/>
                         <span class="ml-2">
                             logout
@@ -46,7 +47,14 @@
 </template>
 
 <script setup lang="ts">
-const user = useSupabaseUser()
+import MobileSidebar from './MobileSidebar.vue';
+const user = useSupabaseUser();
+const supabaseClient = useSupabaseClient();
+
+const logout = async () => {
+    await supabaseClient.auth.signOut();
+    navigateTo('/auth')
+};
 </script>
 
 <style scoped>
