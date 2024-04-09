@@ -24,5 +24,12 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     openaiKey: ''
-  }
+  },
+  components:[
+    {
+      path:'~/component/shared',
+      extensions: ['.vue'],
+      prefix: ''
+    }
+  ]
 })
