@@ -8,7 +8,7 @@
             <div 
             v-for="tool in tools"
             :key="tool.link"
-            @click="navigateTo(`/${tool.link}`)"
+            @click="$router.push(`${tool.link}`)"
             class="p-4 border-muted border flex items-center justify-between hover:shadow-sm transition cursor-pointer"
             >
                 <div class="flex items-center gap-x-4">
